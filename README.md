@@ -1,4 +1,4 @@
-﻿## Title: The Breaker
+﻿## Title: The Auth Breaker
 ## Details:
 * difficulty: Medium
 * category: Web 
