@@ -16,5 +16,10 @@ The main learning point for this challenge is to understanding what JWT is, how 
 
 ## Solution: 
 When we start the application, we see multiple webpages. When we check the page source, we see a directory path **/hidden/page/flag**. When we go to that link we keep on getting redirected, that's strange. We signup and login, now we notice two things, the app uses JWT and on the page source of **/products** page, admin email is disclosed. We then attempt to forge an admin token, this can be done in 3 steps listed below: 
+1. We decode our token using jwt.io where we see a header, payload, and a secret field.
+2. Payload field contains our email address, we attempt to change it to admin's but we need to sign it again.
+3. We attempt to bruteforce the secret using the rockyou.txt file and find the secret key to be **incorrect**.
+
+After this, we sign in using the admin token and again go to the flag path and see the flag.
 
 ........
